@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>Karan's Assignment - Friends</title>
+</head>
+<body>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            color:white;
+        }
+        
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.929);
+            height: fit-content;
+            /* border: 2px solid red; */
+        }
+
+        nav {
+            /* border: 2px solid red; */
+            padding: 15px;
+            height: 50px;
+            background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.929), rgba(65, 63, 62, 0.557));
+        }
+
+        footer{
+            
+            /* border: 2px solid purple; */
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            background-color: black;
+        }
+        ul {
+            /* border: 2px solid green; */
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            justify-content: space-around;
+            height: inherit;
+            width: 100%;
+            align-items: center;
+        }
+
+        li {}
+
+        a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            border: 2px solid rgba(255, 255, 255, 0.265);
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-size: 17px;
+            /* box-shadow: 0px 0px 50px 2px black; */
+            /* background-color: rgba(0, 0, 0, 0.511); */
+            transition: all 0.2s ease-in-out 0s;
+        }
+        a:hover{
+            color: black;
+            background-color: rgb(245, 245, 220);
+            border-radius: 10px;
+        }
+
+        /* Left Image + Right Text */
+        .lr{
+            display: flex;
+            flex-direction: row;
+        }
+        .leftimage{
+            background: url('public/friends-portrait.jpg') no-repeat center center;
+            
+            width: 60%;
+            height: 1000px;
+            background-size: 600px;
+            background-position: 0px -300px;
+            
+            /* border: 2px solid green; */
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px 10px black;
+            transition: all 0.3s ease-in-out 0s;
+            margin: 30px;
+        }
+        .righttext{
+            margin:30px;
+            width: 100%;
+        }
+        .righttext p{
+            font-size: 25px;
+            
+        }
+
+        @media only screen and (max-width:450px)
+        {
+            .container {
+            background-color: rgba(0, 0, 0, 0.929);
+            height: fit-content;
+            /* border: 2px solid red; */
+        }
+
+        nav {
+            /* border: 2px solid red; */
+            padding: 15px;
+            height: 50px;
+            background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.929), rgba(65, 63, 62, 0.557));
+        }
+
+        footer{
+            
+            /* border: 2px solid purple; */
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            background-color: black;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+        ul {
+            /* border: 2px solid green; */
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            justify-content: space-around;
+            height: inherit;
+            width: 100%;
+            align-items: center;
+        }
+
+        li {}
+
+        a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            border: 2px solid rgba(255, 255, 255, 0.265);
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-size: 17px;
+            /* box-shadow: 0px 0px 50px 2px black; */
+            /* background-color: rgba(0, 0, 0, 0.511); */
+            transition: all 0.2s ease-in-out 0s;
+        }
+        a:hover{
+            color: black;
+            background-color: rgb(245, 245, 220);
+            border-radius: 10px;
+        }
+
+        /* Left Image + Right Text */
+        .lr{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .leftimage{
+            background: url('public/friends-portrait.jpg') no-repeat center center;
+            
+            width: 80%;
+            height: 600px;
+            background-size: 400px;
+            background-position: 0px -250px;
+            
+            /* border: 2px solid green; */
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px 10px black;
+            transition: all 0.3s ease-in-out 0s;
+            margin: 30px;
+        }
+        .righttext{
+            margin:30px;
+            width: 100%;
+        }
+        .righttext h1{
+            padding: 0px 20px;
+        }
+        .righttext p{
+            font-size: 15px;
+            padding: 20px;
+            
+        }
+        }
+
+
+
+    </style>
+</body>
+
+<div class="container">
+    <!-- Navbar -->
+
+
+    <nav>
+        <ul>
+            <li><a href="#">TV Shows</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Categories</a></li>
+        </ul>
+    </nav>
+
+    <!-- Left Image + Right Info -->
+     <div class="lr">
+
+         <div class="leftimage">
+             
+        </div>
+
+        <div class="righttext">
+            <h1>FRIENDS</h1>
+            <p>is an American sitcom that revolves around a group of six close-knit friends living in New York City. The series follows the daily lives, relationships, and personal growth of Rachel Green, Ross Geller, Monica Geller, Chandler Bing, Joey Tribbiani, and Phoebe Buffay as they navigate the ups and downs of adulthood.
+
+                The show begins with Rachel Green, a young woman who has just left her fiancé at the altar and is trying to find her place in the world. She reconnects with her high school friend Monica Geller, who lives in an apartment with her roommate Chandler Bing. Rachel moves in with Monica, marking the start of her integration into the group's social circle.
+                
+                Monica is a chef with a competitive streak and a passion for cleanliness. Her brother, Ross Geller, a paleontologist, is introduced as a recently divorced man struggling with his complex romantic history, particularly his on-again, off-again relationship with Rachel. Ross’s relationships and personal issues often become central to the group's dynamics and storylines.
+                
+                Chandler Bing, known for his sarcastic humor and self-deprecating jokes, works in advertising but is often the comedic anchor of the group. He eventually develops a romantic relationship with Monica, leading to significant changes in both of their lives. Chandler’s humor and awkwardness add a layer of comedic relief throughout the series.
+                
+                Joey Tribbiani, an aspiring actor with a love for food and a charming but sometimes clueless personality, brings a light-hearted and endearing quality to the group. His career struggles and romantic escapades provide both comedy and heartfelt moments. Joey's friendship with Chandler is a central aspect of the series, showcasing their strong bond and mutual support.
+                
+                Phoebe Buffay, a quirky and eccentric musician with a mysterious and often troubled past, adds a unique flavor to the group. Her offbeat personality and unconventional outlook on life contribute to the show’s charm. Phoebe's journey includes her attempts to succeed in her music career and her personal growth as she deals with her unconventional family background.
+                
+                The series explores various aspects of friendship and romance, focusing on the characters’ personal and professional lives. It delves into their relationships with each other, romantic partners, and family members, highlighting the importance of support and companionship. Major life events such as weddings, breakups, career changes, and personal milestones are interwoven with humor and heart.
+                
+                Friends also captures the essence of the characters' everyday experiences, from their interactions at their favorite coffee shop, Central Perk, to their various adventures around the city. The show’s setting and relatable scenarios contribute to its enduring appeal, resonating with audiences through its authentic portrayal of friendship and life’s challenges.
+                
+                Overall, Friends is celebrated for its witty dialogue, memorable catchphrases, and the chemistry among its cast members. The series portrays the joys and struggles of growing up, making it a beloved classic that continues to entertain and connect with viewers.</p>
+        </div>
+    </div>
+   
+    <!-- Footer -->
+     <footer>
+        <p>No Rights Reserved &#169;. I stole this website from my dog.</p>
+     </footer>
+</div>
+<script>
+    
+    console.log("Hii");
+    
+
+</script>
+</html>

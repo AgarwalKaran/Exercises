@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>Karan's Assignment - BBT</title>
+</head>
+<body>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            color:white;
+        }
+        
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.929);
+            height: fit-content;
+            /* border: 2px solid red; */
+        }
+
+        nav {
+            /* border: 2px solid red; */
+            padding: 15px;
+            height: 50px;
+            background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.929), rgba(65, 63, 62, 0.557));
+        }
+
+        footer{
+            
+            /* border: 2px solid purple; */
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            background-color: black;
+        }
+        ul {
+            /* border: 2px solid green; */
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            justify-content: space-around;
+            height: inherit;
+            width: 100%;
+            align-items: center;
+        }
+
+        li {}
+
+        a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            border: 2px solid rgba(255, 255, 255, 0.265);
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-size: 17px;
+            /* box-shadow: 0px 0px 50px 2px black; */
+            /* background-color: rgba(0, 0, 0, 0.511); */
+            transition: all 0.2s ease-in-out 0s;
+        }
+        a:hover{
+            color: black;
+            background-color: rgb(245, 245, 220);
+            border-radius: 10px;
+        }
+
+        /* Left Image + Right Text */
+        .lr{
+            display: flex;
+            flex-direction: row;
+        }
+        .leftimage{
+            background: url('public/bbt-portrait.jpg') no-repeat center center;
+            background-size: cover;
+            width: 100%;
+            height: 1000px;
+            /* border: 2px solid green; */
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px 10px black;
+            transition: all 0.3s ease-in-out 0s;
+            margin: 30px;
+        }
+        .righttext{
+            margin:30px;
+            width: 100%;
+        }
+        .righttext p{
+            font-size: 25px;
+            
+        }
+
+        @media only screen and (max-width:450px)
+        {
+            .container {
+            background-color: rgba(0, 0, 0, 0.929);
+            height: fit-content;
+            /* border: 2px solid red; */
+        }
+
+        nav {
+            /* border: 2px solid red; */
+            padding: 15px;
+            height: 50px;
+            background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.929), rgba(65, 63, 62, 0.557));
+        }
+
+        footer{
+            
+            /* border: 2px solid purple; */
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            background-color: black;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+        ul {
+            /* border: 2px solid green; */
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            justify-content: space-around;
+            height: inherit;
+            width: 100%;
+            align-items: center;
+        }
+
+        li {}
+
+        a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            border: 2px solid rgba(255, 255, 255, 0.265);
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-size: 17px;
+            /* box-shadow: 0px 0px 50px 2px black; */
+            /* background-color: rgba(0, 0, 0, 0.511); */
+            transition: all 0.2s ease-in-out 0s;
+        }
+        a:hover{
+            color: black;
+            background-color: rgb(245, 245, 220);
+            border-radius: 10px;
+        }
+
+        /* Left Image + Right Text */
+        .lr{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .leftimage{
+            background: url('public/bbt-portrait.jpg') no-repeat center center;
+            background-size: cover;
+            width: 80%;
+            height: 600px;
+            /* border: 2px solid green; */
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px 10px black;
+            transition: all 0.3s ease-in-out 0s;
+            margin: 30px;
+        }
+        .righttext{
+            margin:30px;
+            width: 100%;
+        }
+        .righttext h1{
+            padding: 0px 20px;
+        }
+        .righttext p{
+            font-size: 15px;
+            padding: 20px;
+            
+        }
+        }
+
+
+
+    </style>
+</body>
+
+<div class="container">
+    <!-- Navbar -->
+
+
+    <nav>
+        <ul>
+            <li><a href="#">TV Shows</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Categories</a></li>
+        </ul>
+    </nav>
+
+    <!-- Left Image + Right Info -->
+     <div class="lr">
+
+         <div class="leftimage">
+             
+        </div>
+
+        <div class="righttext">
+            <h1>THE BIG BANG THEORY</h1>
+            <p>is a popular American sitcom that revolves around a group of friends who are brilliant but socially awkward scientists and their interactions with the world around them. The series primarily focuses on Leonard Hofstadter and Sheldon Cooper, two physicists who share an apartment in Pasadena, California.
+
+                Leonard, a quantum physicist, and Sheldon, a theoretical physicist with a highly regimented and peculiar personality, navigate their daily lives while working at Caltech. Their intellectual prowess is contrasted with their social ineptitude, leading to numerous comedic situations. Despite their challenges, Leonard and Sheldon are well-meaning and supportive friends.
+                
+                The dynamic of the group is enriched by their relationships with Penny, a waitress and aspiring actress who lives across the hall from them. Penny, who has a very different background from the scientists, becomes a central figure in the group's social life. Her interactions with Leonard and Sheldon, as well as her own personal journey, play a significant role in the series.
+                
+                As the series progresses, the circle of friends expands to include Howard Wolowitz, an aerospace engineer with a penchant for grandiose statements and an overconfident attitude, and Rajesh Koothrappali, an astrophysicist who struggles with social anxiety around women. The friendships and relationships among these characters drive much of the show's humor and heart.
+                
+                The series also explores the characters' romantic relationships and personal growth. Leonard and Penny’s evolving relationship is a major subplot, marked by both challenges and milestones. Howard’s relationship with Bernadette Rostenkowski, a microbiologist with a strong personality, adds another layer of complexity and comedy to the show. The relationship between Raj and various romantic interests, as well as Sheldon’s unconventional relationship with Amy Farrah Fowler, a neurobiologist, provides additional comedic and dramatic elements.
+                
+                The Big Bang Theory is renowned for its clever dialogue, pop culture references, and exploration of scientific concepts, often portrayed with a humorous twist. The characters frequently engage in discussions about comic books, science fiction, and other nerdy interests, which are integral to the show’s charm. Their passionate debates and quirks create a rich comedic tapestry that appeals to a wide audience.
+                
+                The series also incorporates elements of family and personal life, as viewers get glimpses into the characters' backgrounds and home lives. The interactions with their families, particularly Sheldon’s relationship with his mother and Leonard’s strained relationship with his father, add depth to the characters.
+                
+                Overall, The Big Bang Theory is a celebration of friendship, love, and the unique traits that make each person special. The show balances humor with heartfelt moments, creating a beloved sitcom that resonates with viewers through its portrayal of the trials and triumphs of its endearing characters.</p>
+        </div>
+    </div>
+   
+    <!-- Footer -->
+     <footer>
+        <p>No Rights Reserved &#169;. I stole this website from my dog.</p>
+     </footer>
+</div>
+<script>
+    
+    console.log("Hii");
+    
+
+</script>
+</html>

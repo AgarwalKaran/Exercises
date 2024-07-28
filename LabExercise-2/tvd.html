@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>Karan's Assignment - TVD</title>
+</head>
+<body>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            color:white;
+        }
+        
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.929);
+            height: fit-content;
+            /* border: 2px solid red; */
+        }
+
+        nav {
+            /* border: 2px solid red; */
+            padding: 15px;
+            height: 50px;
+            background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.929), rgba(65, 63, 62, 0.557));
+        }
+
+        footer{
+            
+            /* border: 2px solid purple; */
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            background-color: black;
+            box-sizing: border-box;
+        }
+        ul {
+            /* border: 2px solid green; */
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            justify-content: space-around;
+            height: inherit;
+            width: 100%;
+            align-items: center;
+        }
+
+        li {}
+
+        a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            border: 2px solid rgba(255, 255, 255, 0.265);
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-size: 17px;
+            /* box-shadow: 0px 0px 50px 2px black; */
+            /* background-color: rgba(0, 0, 0, 0.511); */
+            transition: all 0.2s ease-in-out 0s;
+        }
+        a:hover{
+            color: black;
+            background-color: rgb(245, 245, 220);
+            border-radius: 10px;
+        }
+
+        /* Left Image + Right Text */
+        .lr{
+            display: flex;
+            flex-direction: row;
+        }
+        .leftimage{
+            background: url('public/tcd-portrait.jpg') no-repeat center center;
+            background-size: cover;
+            width: 100%;
+            height: 1000px;
+            /* border: 2px solid green; */
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px 10px black;
+            transition: all 0.3s ease-in-out 0s;
+            margin: 30px;
+        }
+        .righttext{
+            margin:30px;
+            width: 100%;
+        }
+        .righttext p{
+            font-size: 25px;
+            
+        }
+
+
+        /* Phones: */
+        @media only screen and (max-width:450px)
+        {
+            .container {
+            background-color: rgba(0, 0, 0, 0.929);
+            height: fit-content;
+            /* border: 2px solid red; */
+        }
+
+        nav {
+            /* border: 2px solid red; */
+            padding: 15px;
+            height: 50px;
+            background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.929), rgba(65, 63, 62, 0.557));
+        }
+
+        footer{
+            
+            /* border: 2px solid purple; */
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            background-color: black;
+            padding: 10px;
+        }
+        ul {
+            /* border: 2px solid green; */
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            justify-content: space-around;
+            height: inherit;
+            width: 100%;
+            align-items: center;
+        }
+
+        li {}
+
+        a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            border: 2px solid rgba(255, 255, 255, 0.265);
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-size: 17px;
+            /* box-shadow: 0px 0px 50px 2px black; */
+            /* background-color: rgba(0, 0, 0, 0.511); */
+            transition: all 0.2s ease-in-out 0s;
+        }
+        a:hover{
+            color: black;
+            background-color: rgb(245, 245, 220);
+            border-radius: 10px;
+        }
+
+        /* Left Image + Right Text */
+        .lr{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .leftimage{
+            background: url('public/tcd-portrait.jpg') no-repeat center center;
+            background-size: cover;
+            width: 80%;
+            height: 400px;
+            /* border: 2px solid green; */
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px 10px black;
+            transition: all 0.3s ease-in-out 0s;
+            margin: 30px;
+        }
+        .righttext{
+            margin:30px;
+            width: 100%;
+        }
+        .righttext h1{
+            padding: 0px 20px;
+        }
+        .righttext p{
+            font-size: 15px;
+            padding: 20px;
+            
+        }
+        }
+
+    </style>
+</body>
+
+<div class="container">
+    <!-- Navbar -->
+
+
+    <nav>
+        <ul>
+            <li><a href="#">TV Shows</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Categories</a></li>
+        </ul>
+    </nav>
+
+    <!-- Left Image + Right Info -->
+     <div class="lr">
+
+         <div class="leftimage">
+             
+        </div>
+
+        <div class="righttext">
+            <h1>THE VAMPIRE DIARIES</h1>
+            <p> is a supernatural drama series set in the fictional town of Mystic Falls, Virginia. The story follows Elena Gilbert, a high school student coping with the recent loss of her parents in a tragic car accident. As she tries to return to normal life, Elena encounters the mysterious and charming Stefan Salvatore, a new student at her school.
+
+                Unbeknownst to Elena, Stefan is a centuries-old vampire trying to live peacefully among humans. He has returned to Mystic Falls to confront his troubled past and reconnect with the place where he was turned into a vampire. As Elena and Stefan grow closer, she becomes curious about his secretive nature.
+                
+                The arrival of Stefan’s older brother, Damon Salvatore, further complicates matters. Unlike Stefan, Damon embraces his vampire nature and is initially driven by revenge against his brother for past wrongs. His presence in Mystic Falls brings danger and intrigue, as he has a history of violence and manipulation.
+                
+                Elena's discovery of the supernatural world unfolds gradually as she learns about the existence of vampires, witches, and other mystical creatures in Mystic Falls. Her best friends, Bonnie Bennett and Caroline Forbes, become entangled in this hidden world as they discover their own supernatural abilities and connections.
+                
+                Bonnie, a powerful witch, begins to explore her heritage and learn about her magical abilities. Her journey is integral to the story, as she often plays a crucial role in protecting her friends and the town from supernatural threats. Caroline, initially unaware of the supernatural, undergoes significant personal growth as she becomes more involved in the mysteries of Mystic Falls.
+                
+                The series explores the complex dynamics between humans and supernatural beings, delving into themes of love, betrayal, redemption, and the struggle for identity. As Elena navigates her feelings for both Stefan and Damon, she becomes embroiled in their family history and the secrets that surround their vampire lineage.
+                
+                Throughout the series, Mystic Falls serves as a focal point for various supernatural events and threats. The town’s history is intertwined with the supernatural, with founding families and ancient curses playing significant roles in the unfolding drama. The presence of mystical artifacts and powerful beings adds layers of complexity to the plot, keeping viewers engaged with suspenseful twists and turns.
+                
+                As the story progresses, alliances shift, and new characters are introduced, each bringing their own backstory and impact on the central narrative. The series explores the concept of eternal love and the sacrifices characters are willing to make to protect the ones they care about.
+                
+                Ultimately, **The Vampire Diaries** is a tale of enduring friendships, passionate love, and the ongoing battle between good and evil. The characters’ journeys are marked by personal growth, heartbreak, and the constant tension between their human desires and supernatural natures. With its mix of romance, action, and mystery, the series captivates audiences with its richly woven plot and compelling character arcs.</p>
+        </div>
+    </div>
+   
+    <!-- Footer -->
+     <footer>
+        <p>No Rights Reserved &#169;. I stole this website from my dog.</p>
+     </footer>
+</div>
+<script>
+    
+    console.log("Hii");
+    
+
+</script>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+
+        .container{
+            /* background-color: rgba(0, 0, 0, 0.929); */
+            height: 100vh;
+        }
+
+        .fdbckbox{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid green;
+            height: inherit;
+            
+        }
+
+        .fdbckbox input{
+            width: 20%;
+            padding: 10px 5px;
+            /* padding-bottom: 5px; */
+            font-size: 20px;
+            margin: 20px;
+            /* border-radius: 20px; */
+            /* box-shadow: 0px 0px 5px 1px white; */
+            border: 0px;
+            border-bottom: 2px solid black;
+            backdrop-filter: blur(20px);
+            /* overflow:auto; */
+
+        }
+        .fdbckbox input:focus{
+            outline: none;
+            border: none;
+            border-bottom: 2px solid black;
+        }
+
+        .fdbckbox textarea{
+            width: 40%;
+            padding: 10px 5px;
+            font-size: 20px;
+            margin: 20px;
+            
+            border: 2px solid black;
+            backdrop-filter: blur(20px);
+            border-radius: 10px;
+        }
+
+        
+
+        
+
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form class="fdbckbox" action="/feedbackthanks.html">
+
+            <input id="name" name="name" type="text" placeholder="Name">
+            <input id="contact" name="contact" type="number" placeholder="Contact">
+            <textarea id="fdbck" name="fdbck" type="text" placeholder="Enter Feedback"></textarea>
+            
+            <button id="sbmt">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

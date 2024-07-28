@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karan's Assignment - Home</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            color:white;
+        }
+        
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.929);
+            height: fit-content;
+            /* border: 2px solid red; */
+        }
+
+        nav {
+            /* border: 2px solid red; */
+            padding: 15px;
+            height: 50px;
+            background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.929), rgba(65, 63, 62, 0.557));
+        }
+
+        footer{
+            
+            /* border: 2px solid purple; */
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            background-color: black;
+        }
+
+        ul {
+            /* border: 2px solid green; */
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            justify-content: space-around;
+            height: inherit;
+            width: 100%;
+            align-items: center;
+        }
+
+        li {}
+
+        a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            border: 2px solid rgba(255, 255, 255, 0.265);
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-size: 17px;
+            /* box-shadow: 0px 0px 50px 2px black; */
+            /* background-color: rgba(0, 0, 0, 0.511); */
+            transition: all 0.2s ease-in-out 0s;
+        }
+        a:hover{
+            color: black;
+            background-color: rgb(245, 245, 220);
+            border-radius: 10px;
+        }
+
+        /* Hero Sec */
+        .herosec {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0px;
+            align-items: center;
+        }
+
+        #heroimg {
+            background: url('public/moneyheistimg.webp') no-repeat center center;
+            background-size: cover;
+            width: 70%;
+            height: 600px;
+            /* border: 2px solid green; */
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px 10px black;
+            transition: all 0.3s ease-in-out 0s;
+            cursor: pointer;
+        }
+
+        #heroimg:hover {
+            opacity: 0.4;
+            padding: 0px 20px;
+        }
+
+        .rectitle {
+            position: absolute;
+            opacity: 0;
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+            transition: all 0.3s ease-in-out 0s;
+            cursor: pointer;
+        }
+
+        /* Only Here */
+        .onlyhere{
+            /* border: 2px solid red; */
+            padding: 20px;
+
+        }
+        .gridtitle{
+            font-size: 30px;
+            padding:0px 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            
+
+            
+        }
+        .onlyheregrid{
+            display: grid;
+            grid-template-columns: repeat(3,auto);
+            /* border: 2px solid green; */
+            margin:20px 0px;
+            gap: 20px;
+        }
+        .ohimages{
+            height: 200px;
+            width:500px;
+            /* border: 2px solid green; */
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px 10px black;
+            transition: all 0.3s ease-in-out 0s;
+            cursor: pointer;
+            display: flex;
+            align-items: end;
+            
+        }
+        .ohimages:hover{
+            opacity: 0.7;
+            width: 510px;
+        }
+        .ohimages::before{
+            content: "Money Heist";
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            /* border: 2px solid green; */
+            background-color: rgba(0, 0, 0, 0.447);
+            height: 30px;
+            width: 100%;
+        }
+        #oimg1 {
+            background: url('public/tvd.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        #oimg1::before{
+            content: "The Vampire Diaries";
+        }
+
+        #oimg2 {
+            background: url('public/friends.webp') no-repeat center center;
+            background-size: cover;
+            background-position: 0px 0px;
+        }
+        #oimg2::before{
+            content: "Friends";
+        }
+        #oimg3 {
+            background: url('public/wednesday.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        #oimg3::before{
+            content: "Wednesday";
+        }
+
+        #oimg4 {
+            background: url('public/bbt.jpg') no-repeat center center;
+            background-size: cover;
+            background-position: 0px 0px;
+        }
+        #oimg4::before{
+            content: "Big Bang Theory";
+        }
+
+        #oimg5 {
+            background: url('public/himym.jpg') no-repeat center center;
+            background-size: cover;
+            background-position: 0px 0px;
+        }
+        #oimg5::before{
+            content: "How I Met Your Mother";
+        }
+
+        /* Top 10 */
+        .top10{
+            /* border: 2px solid red; */
+            padding: 20px;
+
+        }
+        .top10grid{
+            display: grid;
+            grid-template-columns: repeat(3,auto);
+            /* border: 2px solid green; */
+            margin:20px 0px;
+            gap: 20px;
+        }
+        .timages{
+            height: 200px;
+            width:500px;
+            /* border: 2px solid green; */
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px 10px black;
+            transition: all 0.3s ease-in-out 0s;
+            cursor: pointer;
+            display: flex;
+            align-items: end;
+            
+        }
+        .timages:hover{
+            opacity: 0.7;
+            width: 510px;
+        }
+        .timages::before{
+            content: "Money Heist";
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            /* border: 2px solid green; */
+            background-color: rgba(0, 0, 0, 0.447);
+            height: 30px;
+            width: 100%;
+        }
+        #timg1 {
+            background: url('public/bb.jpg') no-repeat center center;
+            background-size: cover;
+            background-position: 0px;
+        }
+        #timg1::before{
+            content: "Breaking Bad";
+        }
+
+        #timg2 {
+            background: url('public/aib.jpg') no-repeat center center;
+            background-size: cover;
+            background-position: 0px -20px;
+        }
+        #timg2::before{
+            content: "Alice in Borderland";
+        }
+        #timg3 {
+            background: url('public/elite.jpg') no-repeat center center;
+            background-size: cover;
+            background-position: 0px -20px;
+        }
+        #timg3::before{
+            content: "Elite";
+        }
+        #timg4 {
+            background: url('public/newgirl.jpg') no-repeat center center;
+            background-size: cover;
+            background-position: 0px -20px;
+            
+        }
+        #timg4::before{
+            content: "New Girl";
+        }
+
+        #timg5 {
+            background: url('public/strangerthings.jpg') no-repeat center center;
+            background-size: cover;
+            background-position: 0px -80px;
+        }
+        #timg5::before{
+            content: "Stranger Things";
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Navbar -->
+
+
+        <nav>
+            <ul>
+                <li><a href="underconstruction.html">TV Shows</a></li>
+                <li><a href="underconstruction.html">Movies</a></li>
+                <li><a href="underconstruction.html">Categories</a></li>
+            </ul>
+        </nav>
+
+
+        <!-- Hero Sec -->
+        <div class="herosec">
+            <div id="heroimg" onmouseover="titledisplay()" onmouseout="titlenodisplay()" onclick="openMoneyHeist()">
+            </div>
+            <p class="rectitle" onmouseover="titledisplay()">MONEY HEIST</p>
+
+        </div>
+
+        <!-- Grid of movies and TV Shows: -->
+         <!-- Only Here -->
+         <div class="onlyhere">
+             <p class="gridtitle">Only on my assignment</p>
+            <div class="onlyheregrid">
+
+                <div id="oimg1" class="ohimages" onclick="openTVD()"></div>
+                <div id="oimg2" class="ohimages" onclick="openFriends()"></div>
+                <div id="oimg3" class="ohimages" onclick="openWednesday()"></div>
+                <div id="oimg4" class="ohimages" onclick="openBBT()"></div>
+                <div id="oimg5" class="ohimages" onclick="openHimym()"></div>
+            </div>
+        </div>
+
+        <!-- Top 10 -->
+         <div class="top10">
+             <p class="gridtitle">Top 5 Shows in MCA</p>
+            <div class="top10grid">
+
+                <div id="timg1" class="timages" onclick="underconstruction()"></div>
+                <div id="timg2" class="timages" onclick="underconstruction()"></div>
+                <div id="timg3" class="timages" onclick="underconstruction()"></div>
+                <div id="timg4" class="timages" onclick="underconstruction()"></div>
+                <div id="timg5" class="timages" onclick="underconstruction()"></div>
+            </div>
+        </div>
+
+
+        <!-- Footer -->
+         <footer>
+            <p>No Rights Reserved &#169;. I stole this website from my dog.</p>
+         </footer>
+    </div>
+    <script>
+        function titledisplay()
+        {
+            document.getElementsByClassName('rectitle')[0].style.opacity="1";
+            console.log("mouseover");
+            document.getElementById("heroimg").style.opacity="0.4";
+        }
+        function titlenodisplay()
+        {
+            document.getElementsByClassName('rectitle')[0].style.opacity="0";
+            console.log("mouseover");
+            document.getElementById("heroimg").style.opacity="1";
+        }
+
+        console.log("Hii");
+
+        function openMoneyHeist()
+        {
+            document.location.href="moneyheist.html";
+        }
+        function openTVD()
+        {
+            document.location.href="tvd.html";
+        }
+        function openFriends()
+        {
+            document.location.href="friends.html";
+        }
+        function openWednesday()
+        {
+            document.location.href="wednesday.html";
+        }
+        function openBBT()
+        {
+            document.location.href="BBT.html";
+        }
+        function openHimym()
+        {
+            document.location.href="himym.html";
+        }
+
+        function underconstruction()
+        {
+            document.location.href="underconstruction.html";
+        }
+
+    </script>
+</body>
+
+</html>
