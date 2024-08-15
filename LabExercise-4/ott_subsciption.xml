@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ott_subscription SYSTEM "ott_subscription.dtd">
+<ott_subscription xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ott_subscription.xsd">
+
+    <subscription>
+        <user_id>101</user_id>
+        <user_name>Karan</user_name>
+        <package>&premium;</package>
+        <status>&userActive;</status>
+        <start_date>2023-08-01</start_date>
+        <end_date>2024-08-01</end_date>
+        <region>&regionNA;</region>
+    </subscription>
+
+    <subscription>
+        <user_id>102</user_id>
+        <user_name>Anjali</user_name>
+        <package>&standard;</package>
+        <status>&userActive;</status>
+        <start_date>2022-09-15</start_date>
+        <end_date>2023-09-15</end_date>
+        <region>&regionEU;</region>
+    </subscription>
+    
+    <subscription>
+        <user_id>103</user_id>
+        <user_name>Ravi</user_name>
+        <package>&basic;</package>
+        <status>&userInactive;</status>
+        <start_date>2021-05-10</start_date>
+        <end_date>2022-05-10</end_date>
+        <region>&regionIN;</region>
+    </subscription>
+    
+    <subscription>
+        <user_id>104</user_id>
+        <user_name>Priya</user_name>
+        <package>&premium;</package>
+        <status>&userActive;</status>
+        <start_date>2023-06-20</start_date>
+        <end_date>2024-06-20</end_date>
+        <region>&regionAPAC;</region>
+    </subscription>
+
+    <subscription>
+        <user_id>105</user_id>
+        <user_name>Amit</user_name>
+        <package>&standard;</package>
+        <status>&userInactive;</status>
+        <start_date>2020-12-01</start_date>
+        <end_date>2021-12-01</end_date>
+        <region>&regionIN;</region>
+    </subscription>
+    
+    <subscription>
+        <user_id>106</user_id>
+        <user_name>Megha</user_name>
+        <package>&premium;</package>
+        <status>&userActive;</status>
+        <start_date>2023-04-15</start_date>
+        <end_date>2024-04-15</end_date>
+        <region>&regionEU;</region>
+    </subscription>
+    
+    <subscription>
+        <user_id>107</user_id>
+        <user_name>Rahul</user_name>
+        <package>&basic;</package>
+        <status>&userInactive;</status>
+        <start_date>2021-07-10</start_date>
+        <end_date>2022-07-10</end_date>
+        <region>&regionNA;</region>
+    </subscription>
+
+    <subscription>
+        <user_id>108</user_id>
+        <user_name>Divya</user_name>
+        <package>&premium;</package>
+        <status>&userActive;</status>
+        <start_date>2022-10-05</start_date>
+        <end_date>2023-10-05</end_date>
+        <region>&regionIN;</region>
+    </subscription>
+    
+    <subscription>
+        <user_id>109</user_id>
+        <user_name>Rajesh</user_name>
+        <package>&standard;</package>
+        <status>&userActive;</status>
+        <start_date>2023-02-11</start_date>
+        <end_date>2024-02-11</end_date>
+        <region>&regionAPAC;</region>
+    </subscription>
+    
+    <subscription>
+        <user_id>110</user_id>
+        <user_name>Sneha</user_name>
+        <package>&basic;</package>
+        <status>&userInactive;</status>
+        <start_date>2020-11-01</start_date>
+        <end_date>2021-11-01</end_date>
+        <region>&regionIN;</region>
+    </subscription>
+</ott_subscription>

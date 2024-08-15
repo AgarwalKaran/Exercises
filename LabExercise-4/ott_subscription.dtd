@@ -1,0 +1,24 @@
+<!ELEMENT ott_subscription (subscription+)>
+<!ATTLIST ott_subscription 
+          xmlns:xsi CDATA #IMPLIED
+          xsi:noNamespaceSchemaLocation CDATA #IMPLIED>
+<!ELEMENT subscription (user_id, user_name, package, status, start_date, end_date, region)>
+<!ELEMENT user_id (#PCDATA)>
+<!ELEMENT user_name (#PCDATA)>
+<!ELEMENT package (#PCDATA)>
+<!ELEMENT status (#PCDATA)>
+<!ELEMENT start_date (#PCDATA)>
+<!ELEMENT end_date (#PCDATA)>
+<!ELEMENT region (#PCDATA)>
+
+
+<!-- Entity declarations for package types and regions -->
+<!ENTITY premium "Premium">
+<!ENTITY standard "Standard">
+<!ENTITY basic "Basic">
+<!ENTITY userActive "Active">
+<!ENTITY userInactive "Inactive">
+<!ENTITY regionNA "North America">
+<!ENTITY regionEU "Europe">
+<!ENTITY regionAPAC "Asia-Pacific">
+<!ENTITY regionIN "India">
