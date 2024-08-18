@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Data</title>
+    <script>
+        
+        function loadXMLDoc(filename) {
+            let xhttp = new XMLHttpRequest();
+            xhttp.open("GET", filename, false);
+            xhttp.send();
+            return xhttp.responseXML;
+        }
+
+        function transformXML() {
+            let xml = loadXMLDoc("ott_subscription.xml");
+            let xsl = loadXMLDoc("transform.xsl");
+
+            
+            // if (window.ActiveXObject) {
+                
+            //     let ex = xml.transformNode(xsl);
+            //     document.getElementById("subscription-data").innerHTML = ex;
+            // } 
+            //else
+            if (document.implementation && document.implementation.createDocument) {
+                
+                let xsltProcessor = new XSLTProcessor();
+                xsltProcessor.importStylesheet(xsl);
+                let resultDocument = xsltProcessor.transformToFragment(xml, document);
+                document.getElementById("subscription-data").appendChild(resultDocument);
+            }
+        }
+    </script>
+</head>
+<body onload="transformXML()">
+    <!-- <h1>Subscription Data</h1> -->
+    <div id="subscription-data"></div>
+</body>
+</html>
