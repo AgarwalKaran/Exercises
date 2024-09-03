@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: calc(100% - 30px);
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input.valid {
+            border-color: green;
+        }
+
+        input.invalid {
+            border-color: red;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+            display: none;
+        }
+
+        .icon {
+            position: absolute;
+            right: 10px;
+            top: 34px;
+            font-size: 18px;
+            display: none;
+        }
+
+        .icon.valid {
+            color: green;
+            display: block;
+        }
+
+        .icon.invalid {
+            color: red;
+            display: block;
+        }
+
+        .submit-btn {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .submit-btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>User Registration Form</h2>
+    <form id="registrationForm">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <span class="icon" id="nameIcon">✔</span>
+            <span class="error-message" id="nameError">Name must be at least 3 characters long and contain only letters and spaces.</span>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <span class="icon" id="emailIcon">✔</span>
+            <span class="error-message" id="emailError">Please enter a valid email address.</span>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <span class="icon" id="passwordIcon">✔</span>
+            <span class="error-message" id="passwordError">Password must be at least 8 characters long and contain both letters and numbers.</span>
+        </div>
+
+        <div class="form-group">
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <span class="icon" id="confirmPasswordIcon">✔</span>
+            <span class="error-message" id="confirmPasswordError">Passwords do not match.</span>
+        </div>
+
+        <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+            <span class="icon" id="dobIcon">✔</span>
+            <span class="error-message" id="dobError">You must be at least 18 years old.</span>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submitBtn" disabled>Register</button>
+    </form>
+
+    <script>
+        const form = document.getElementById('registrationForm');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const confirmPasswordInput = document.getElementById('confirmPassword');
+        const dobInput = document.getElementById('dob');
+        const submitBtn = document.getElementById('submitBtn');
+
+        const nameError = document.getElementById('nameError');
+        const emailError = document.getElementById('emailError');
+        const passwordError = document.getElementById('passwordError');
+        const confirmPasswordError = document.getElementById('confirmPasswordError');
+        const dobError = document.getElementById('dobError');
+
+        const nameIcon = document.getElementById('nameIcon');
+        const emailIcon = document.getElementById('emailIcon');
+        const passwordIcon = document.getElementById('passwordIcon');
+        const confirmPasswordIcon = document.getElementById('confirmPasswordIcon');
+        const dobIcon = document.getElementById('dobIcon');
+
+        function validateName() {
+            const namePattern = /^[A-Za-z\s]{3,}$/;
+            if (namePattern.test(nameInput.value)) {
+                nameInput.classList.add('valid');
+                nameInput.classList.remove('invalid');
+                nameError.style.display = 'none';
+                nameIcon.classList.add('valid');
+                nameIcon.classList.remove('invalid');
+                nameIcon.textContent = '✔';
+            } else {
+                nameInput.classList.remove('valid');
+                nameInput.classList.add('invalid');
+                nameError.style.display = 'block';
+                nameIcon.classList.remove('valid');
+                nameIcon.classList.add('invalid');
+                nameIcon.textContent = '✘';
+            }
+        }
+
+        function validateEmail() {
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (emailPattern.test(emailInput.value)) {
+                emailInput.classList.add('valid');
+                emailInput.classList.remove('invalid');
+                emailError.style.display = 'none';
+                emailIcon.classList.add('valid');
+                emailIcon.classList.remove('invalid');
+                emailIcon.textContent = '✔';
+            } else {
+                emailInput.classList.remove('valid');
+                emailInput.classList.add('invalid');
+                emailError.style.display = 'block';
+                emailIcon.classList.remove('valid');
+                emailIcon.classList.add('invalid');
+                emailIcon.textContent = '✘';
+            }
+        }
+
+        function validatePassword() {
+            const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+            if (passwordPattern.test(passwordInput.value)) {
+                passwordInput.classList.add('valid');
+                passwordInput.classList.remove('invalid');
+                passwordError.style.display = 'none';
+                passwordIcon.classList.add('valid');
+                passwordIcon.classList.remove('invalid');
+                passwordIcon.textContent = '✔';
+            } else {
+                passwordInput.classList.remove('valid');
+                passwordInput.classList.add('invalid');
+                passwordError.style.display = 'block';
+                passwordIcon.classList.remove('valid');
+                passwordIcon.classList.add('invalid');
+                passwordIcon.textContent = '✘';
+            }
+            validateConfirmPassword();
+        }
+
+        function validateConfirmPassword() {
+            if (confirmPasswordInput.value === passwordInput.value && confirmPasswordInput.value !== '') {
+                confirmPasswordInput.classList.add('valid');
+                confirmPasswordInput.classList.remove('invalid');
+                confirmPasswordError.style.display = 'none';
+                confirmPasswordIcon.classList.add('valid');
+                confirmPasswordIcon.classList.remove('invalid');
+                confirmPasswordIcon.textContent = '✔';
+            } else {
+                confirmPasswordInput.classList.remove('valid');
+                confirmPasswordInput.classList.add('invalid');
+                confirmPasswordError.style.display = 'block';
+                confirmPasswordIcon.classList.remove('valid');
+                confirmPasswordIcon.classList.add('invalid');
+                confirmPasswordIcon.textContent = '✘';
+            }
+        }
+
+        function validateDOB() {
+            const today = new Date();
+            const dob = new Date(dobInput.value);
+            const age = today.getFullYear() - dob.getFullYear();
+            const monthDifference = today.getMonth() - dob.getMonth();
+
+            if (
+                age > 18 ||
+                (age === 18 && (monthDifference > 0 || (monthDifference === 0 && today.getDate() >= dob.getDate())))
+            ) {
+                dobInput.classList.add('valid');
+                dobInput.classList.remove('invalid');
+                dobError.style.display = 'none';
+                dobIcon.classList.add('valid');
+                dobIcon.classList.remove('invalid');
+                dobIcon.textContent = '✔';
+            } else {
+                dobInput.classList.remove('valid');
+                dobInput.classList.add('invalid');
+                dobError.style.display = 'block';
+                dobIcon.classList.remove('valid');
+                dobIcon.classList.add('invalid');
+                dobIcon.textContent = '✘';
+            }
+        }
+
+        function checkFormValidity() {
+            if (
+                nameInput.classList.contains('valid') &&
+                emailInput.classList.contains('valid') &&
+                passwordInput.classList.contains('valid') &&
+                confirmPasswordInput.classList.contains('valid') &&
+                dobInput.classList.contains('valid')
+            ) {
+                submitBtn.disabled = false;
+            } else {
+                submitBtn.disabled = true;
+            }
+        }
+
+        nameInput.addEventListener('input', () => {
+            validateName();
+            checkFormValidity();
+        });
+
+        emailInput.addEventListener('input', () => {
+            validateEmail();
+            checkFormValidity();
+        });
+
+        passwordInput.addEventListener('input', () => {
+            validatePassword();
+            checkFormValidity();
+        });
+
+        confirmPasswordInput.addEventListener('input', () => {
+            validateConfirmPassword();
+            checkFormValidity();
+        });
+
+        dobInput.addEventListener('input', () => {
+            validateDOB();
+            checkFormValidity();
+        });
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Form submitted successfully!');
+        });
+    </script>
+
+</body>
+</html>
